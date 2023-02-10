@@ -9,12 +9,12 @@ pipeline {
         }
         stage('terraform initialization') {
             steps {
-                terraform init
+                @terraform init
             }
         }
         stage('terraform applying') {
             steps {
-                terraform apply --auto-approve
+                @terraform apply --auto-approve
             }
         }
     }
